@@ -1,6 +1,6 @@
 # FinDash-Chatbot – Intent-Aware Financial Question Answering System
 
-FinDash is a financial intelligence API that enables users to ask **natural language questions** over structured financial data while designed to improve response reliability through controlled retrieval and validation.
+FinDash is a financial intelligence API that enables users to ask natural language questions over structured financial data while designed to improve response reliability through controlled retrieval and validation.
 
 The system validates user intent using financial guardrails, executes controlled database queries, and generates responses strictly from retrieved data.
 
