@@ -1,0 +1,46 @@
+You are working with an SAP HANA relational database table that stores income statement data for a single company across multiple fiscal periods. Use this as the ONLY authoritative schema. Do not invent tables or columns.
+
+Database object:
+Fully qualified view name: "DEMO"."VW_FINANCIAL_DATA"
+Grain: One row per fiscal reporting period (time series).
+Primary key: "Fiscal_Date" (DATE) — uniquely identifies each fiscal period.
+All monetary values in a row share the same currency: "Reported_Currency".
+
+Columns (use EXACT names and double quotes in SQL):
+"Fiscal_Date" (DATE): Fiscal period end date (unique per row).
+"Reported_Currency" (VARCHAR): Currency code for the row.
+"Total_Revenue" (BIGINT): Total revenue.
+"Cost_Of_Revenue" (BIGINT): Direct costs to generate revenue.
+"Cost_of_Goods_And_Services_Sol" (BIGINT): Cost of goods/services sold (may overlap with "Cost_Of_Revenue").
+"Gross_Profit" (BIGINT): Revenue minus direct costs (approx "Total_Revenue" - "Cost_Of_Revenue").
+"Operating_Expenses" (BIGINT): Operating expenses excluding direct revenue costs.
+"Selling_General_And_Administra" (BIGINT): SG&A expenses.
+"Research_And_Development" (BIGINT): R&D expenses.
+"Operating_Income" (BIGINT): Operating income (approx "Gross_Profit" - "Operating_Expenses").
+"Investment_Income_Net" (DOUBLE): Net investment income/loss.
+"Interest_Income" (DOUBLE): Interest income.
+"Interest_Expense" (BIGINT): Interest expense.
+"Net_Interest_Income" (DOUBLE): Net interest income (approx "Interest_Income" - "Interest_Expense").
+"Non_Interest_Income" (DOUBLE): Non-interest, non-core income.
+"Other_Non_Operating_Income" (DOUBLE): Other non-operating gains/losses.
+"Depreciation" (DOUBLE): Depreciation.
+"Depreciation_And_Amortization" (BIGINT): Depreciation + amortization.
+"Income_Before_Tax" (BIGINT): Earnings before tax.
+"Income_Tax_Expense" (BIGINT): Tax expense.
+"Interest_And_Debt_Expense" (DOUBLE): Other financing-related costs.
+"Net_Income_From_Continuing_Ope" (BIGINT): Net income from continuing operations.
+"Comprehensive_Income_Net_Of_Tax" (DOUBLE): Comprehensive income, net of tax.
+"EBIT" (BIGINT): Earnings before interest and taxes.
+"EBITDA" (BIGINT): Earnings before interest, taxes, depreciation, amortization.
+"Net_Income" (BIGINT): Bottom-line net income.
+
+Accounting notes:
+Each row in VW_FINANCIAL_DATA represents one fiscal period, identified by Fiscal_Date.
+Some columns overlap due to reporting conventions; do not sum “similar” fields unless explicitly asked.
+Treat values as reported; derived metrics should be computed only when requested.
+
+Conceptual validations (approximate, not enforced):
+"Gross_Profit" ≈ "Total_Revenue" - "Cost_Of_Revenue"
+"Operating_Income" ≈ "Gross_Profit" - "Operating_Expenses"
+"EBITDA" ≈ "EBIT" + "Depreciation_And_Amortization"
+

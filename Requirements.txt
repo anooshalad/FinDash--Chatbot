@@ -1,0 +1,36 @@
+# =========================
+# Third-party dependencies
+# =========================
+
+fastapi
+uvicorn
+pydantic
+python-dotenv
+hdbcli
+openpyxl
+guardrails-ai
+pandas
+
+
+# =========================
+# Standard Library Modules
+# (DO NOT INSTALL – built into Python)
+# =========================
+# os
+# json
+# ast
+# logging
+# logging.handlers
+# datetime
+# typing
+# sys
+# pathlib
+
+
+# =========================
+# Project-local modules
+# (your own files – NOT pip packages)
+# =========================
+# constants
+# finance_guardrails
+# Prompts.prompts
