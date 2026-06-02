@@ -16,7 +16,7 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment
 
 from logger import get_logger
-logger = get_logger("percibot")
+logger = get_logger("findash")
 
 def main():
     logger.info("Application started")
@@ -26,8 +26,8 @@ def main():
 # =========================
 # Excel logging config + helper
 # =========================
-REPORT_XLSX = os.getenv("PERCIBOT_REPORT_XLSX", "perci_query_log.xlsx")
-SHEET_NAME = os.getenv("PERCIBOT_REPORT_SHEET", "Query_Log")
+REPORT_XLSX = os.getenv("FINDASH_REPORT_XLSX", "findash_query_log.xlsx")
+SHEET_NAME = os.getenv("FINDASH_REPORT_SHEET", "Query_Log")
 
 REPORT_COLUMNS = [
     "timestamp",
