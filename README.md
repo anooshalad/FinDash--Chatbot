@@ -23,7 +23,7 @@ The system validates user intent using financial guardrails, executes controlled
 * python-dotenv
 * OpenPyXL
 
-## Project Workflow
+## Project Workflow:
 
 1. User submits a financial question
 2. Request is validated
