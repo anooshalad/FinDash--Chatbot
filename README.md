@@ -1,6 +1,6 @@
 # FinDash-Chatbot – Intent-Aware Financial Question Answering System
 
-FinDash is a financial intelligence API that enables users to ask **natural language questions** over structured financial data while ensuring **accuracy, security, and zero hallucination**.
+FinDash is a financial intelligence API that enables users to ask **natural language questions** over structured financial data while designed to improve response reliability through controlled retrieval and validation.
 
 The system validates user intent using financial guardrails, executes controlled database queries, and generates responses strictly from retrieved data.
 
@@ -11,7 +11,7 @@ The system validates user intent using financial guardrails, executes controlled
 * Secure SAP HANA database integration
 * Structured and reliable answer generation
 * Protection against hallucinated outputs
-* Enterprise-oriented backend architecture
+* Backend architecture designed with scalability and modularity in mind
 
 ## Tech Stack
 
@@ -37,7 +37,7 @@ The system validates user intent using financial guardrails, executes controlled
 ```plaintext
 FinDash/
 │
-├── main.py
+├── app.py
 ├── finance_guardrails.py
 ├── prompts/
 ├── db/
@@ -120,4 +120,5 @@ The total revenue for the latest quarter was ₹X based on available financial r
 
 ## License
 
-This project is intended for educational and enterprise experimentation purposes.
+This project represents my independent implementation and adaptation of concepts explored during prior professional experience. The repository contains only generalized components intended for learning and portfolio purposes.
+
